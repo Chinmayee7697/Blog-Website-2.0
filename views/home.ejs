@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+
+<div class="display">
+
+    <div class="home"> 
+        <h1><%= homeStartingContent  %></h1>
+    </div>
+<div>
+<h3> Start an Exciting Adventure through a World Full of Interesting Things to Learn and Inspiring Ideas to Spark Your Imagination.</h3>
+</div>
+
+</div>
+
+
+<div class="displayBlogs">
+    <h1>Blogs</h1>
+<% posts.forEach(function(post){ %>
+    <h2> <%= post.title %> </h2>
+    <p> <%=  post.content.substring(0, 100) + " ... "  %> <a href="/posts/<%=post._id %>">Read More</a></p>
+<% }) %>
+
+</div>
+
+<%- include("partials/footer.ejs") %>
